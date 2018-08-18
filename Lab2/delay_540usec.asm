@@ -1,0 +1,10 @@
+	;Delay	540usec
+		ORG 	8000H
+DELAY540U:	MOV	R2,#2  		;1
+AGAIN:		MOV	R3,#125		;1
+NEXT:		DJNZ	R3,NEXT		;2 125*2 = 250	;(250+3)*2 = 506 +3 = 509MC 1MC = 1.0592usce 
+		DJNZ	R2,AGAIN	;2		
+		RET			;2
+		
+		END
+	

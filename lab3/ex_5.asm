@@ -1,0 +1,13 @@
+;ex_5
+	ORG	0000H
+	MOV	R0,#20H
+	MOV	R1,#50H
+LOOP:	MOV	A,@R0
+	MOV	@R1,A
+	INC	R0
+	INC	R1
+	CJNE	R0,#4FH,LOOP
+	
+	JMP	$
+	END
+			

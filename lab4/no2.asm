@@ -1,0 +1,16 @@
+;no2.asm
+	ORG	0000H
+	MOV	R1,#45
+	MOV	A,R1
+	MOV	B,#10
+	DIV	AB
+	MOV	R2,A
+	MOV	R3,B
+	MOV	A,R3
+	MOV	B,#10
+	MOV	A,R2
+	MUL	AB
+	ADD	A,R3
+	
+	JPM	$
+	END
